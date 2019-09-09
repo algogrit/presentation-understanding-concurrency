@@ -6,7 +6,7 @@ layout: true
 
 class: center, middle
 
-# {title}
+# Understanding concurrency: a comparison Java, JS, Ruby/Python, Golang/Erlang
 
 Gaurav Agarwal
 
@@ -44,7 +44,7 @@ func main() {
 class: center, middle
 
 Code
-https://github.com/algogrit/presentation-template
+https://github.com/algogrit/presentation-understanding-concurrency
 
 Slides
-https://template.slides.algogrit.com
+https://understanding-concurrency.slides.algogrit.com
