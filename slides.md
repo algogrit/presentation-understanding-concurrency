@@ -47,7 +47,7 @@ class: center, middle
 
 # 🙋‍♂️
 
-## How many of you are students or are new to programming in Go?
+## How many of you are new to programming in Go?
 
 # 🙋
 
