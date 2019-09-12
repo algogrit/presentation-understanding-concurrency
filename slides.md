@@ -6,13 +6,28 @@ layout: true
 
 class: center, middle
 
-# Understanding concurrency: a comparison Java, JS, Ruby/Python, Golang/Erlang
+# Understanding concurrency: a comparison C, JS, Java, Ruby, Golang
 
 Gaurav Agarwal
 
 ---
 
 # Agenda
+
+* Concurrency vs Parallelism
+* The UNIX way
+
+  * Brief overview of concurrency in C
+
+* Concurrency without threads or processes?
+
+  * JS -> Promises
+
+* What makes concurrency hard?
+
+* Java vs interpreted languages like Python and Ruby
+
+* An elegant solution to the messy problems of concurrency: Go
 
 ---
 
@@ -27,24 +42,144 @@ Principal Consultant & Founder @ https://agarwalconsulting.io
 ex-Tarka Labs, ex-BrowserStack, ex-ThoughtWorks
 
 ---
+
 class: center, middle
 
-```golang
-package main
+# 🙋‍♂️
 
-import "fmt"
+## How many of you are students or are new to programming in Go?
 
-func main() {
-  fmt.Println("Hello, world!")
-}
-```
+# 🙋
 
 ---
 
 class: center, middle
 
+# 🙋‍♂️🙋
+
+## How many of you are familiar or have worked with concurrency?
+
+# 🙋🙋‍♂️
+
+---
+class: center, middle
+
+# What is concurrency?
+
+---
+class: center, middle
+
+Concurrency is the composition of independently executing processes, while parallelism is the simultaneous execution of (possibly related) computations.
+
+.content-credits[https://blog.golang.org/concurrency-is-not-parallelism]
+
+---
+class: center, middle
+
+# The C way: Processes and Threads
+
+---
+class: center, middle
+
+Coding time...
+
+---
+class: center, middle
+
+# 🙋‍♂️
+
+## Is concurrency without threads and processes possible?
+
+# 🙋
+
+---
+class: center, middle
+
+## Absolutely! Take a look at JS...
+
+---
+class: center, middle
+
+# What about Java?
+
+---
+class: center, middle
+
+## NIO
+
+.content-credits[https://docs.oracle.com/javase/7/docs/api/java/nio/package-summary.html]
+
+---
+class: center, middle
+
+## And Ruby/Python?
+
+---
+class: center, middle
+
+# What's the problem with Threads and Processes?
+
+---
+
+## Processes
+
+* Each process has dedicated memory
+* Risk of zombies
+* Context switching overhead
+* Requires inter-process communication
+
+---
+
+## Threads
+
+* Shared memory
+* Race conditions & deadlocks
+* Context switching overhead
+* Lower memory footprint than process, but still high (~8 MB)
+
+---
+class: center, middle
+
+# How do you do highly concurrent apps?
+
+---
+class: center, middle
+
+## Concurrency is HARD!
+
+---
+class: center, middle
+
+Or is it?
+
+---
+class: center, middle
+
+# Go
+
+---
+class: center, middle
+
+![Coding](assets/images/gopher-typing.gif)
+
+---
+
+* Comes from the CSP paper, same as Erlang
+* Has lightweight user-space threads, (~8 KB)
+* Go's scheduler does the heavy-lifting
+
+---
+
+# References
+
+* Linux threads - [Context switching and memory overhead](https://eli.thegreenplace.net/2018/measuring-context-switching-and-memory-overheads-for-linux-threads/)
+* Kavya Joshi's - [Go's scheduler talk](https://www.youtube.com/watch?v=KBZlN0izeiY)
+
+---
+class: center, middle
+
 Code
-https://github.com/algogrit/presentation-understanding-concurrency
+https://github.com/Chennai-Golang/101-workshop/tree/master/examples/concurrency
 
 Slides
 https://understanding-concurrency.slides.algogrit.com
