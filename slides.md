@@ -15,6 +15,7 @@ Gaurav Agarwal
 # Agenda
 
 * Concurrency vs Parallelism
+
 * The UNIX way
 
   * Brief overview of concurrency in C
@@ -37,7 +38,7 @@ class: center, middle
 
 Software Engineer & Product Developer
 
-Principal Consultant & Founder @ https://agarwalconsulting.io
+Principal Consultant & Director of Engineering
 
 ex-Tarka Labs, ex-BrowserStack, ex-ThoughtWorks
 
@@ -84,6 +85,16 @@ class: center, middle
 Coding time...
 
 ---
+
+* `int getRandomIterCount()`
+
+* `void busyWork(int iterCount)`
+
+* `void say(char word[], int index)`
+
+* `int main()`
+
+---
 class: center, middle
 
 # 🙋‍♂️
@@ -124,8 +135,11 @@ class: center, middle
 ## Processes
 
 * Each process has dedicated memory
+
 * Risk of zombies
+
 * Context switching overhead
+
 * Requires inter-process communication
 
 ---
@@ -133,14 +147,17 @@ class: center, middle
 ## Threads
 
 * Shared memory
+
 * Race conditions & deadlocks
+
 * Context switching overhead
+
 * Lower memory footprint than process, but still high (~8 MB)
 
 ---
 class: center, middle
 
-# How do you do highly concurrent apps?
+# How do you run highly concurrent apps (>10,000 concurrent tasks)?
 
 ---
 class: center, middle
@@ -165,7 +182,9 @@ class: center, middle
 ---
 
 * Comes from the CSP paper, same as Erlang
+
 * Has lightweight user-space threads, (~8 KB)
+
 * Go's scheduler does the heavy-lifting
 
 ---
@@ -173,13 +192,14 @@ class: center, middle
 # References
 
 * Linux threads - [Context switching and memory overhead](https://eli.thegreenplace.net/2018/measuring-context-switching-and-memory-overheads-for-linux-threads/)
+
 * Kavya Joshi's - [Go's scheduler talk](https://www.youtube.com/watch?v=KBZlN0izeiY)
 
 ---
 class: center, middle
 
 Code
-https://github.com/Chennai-Golang/101-workshop/tree/master/examples/concurrency
+https://github.com/AgarwalConsulting/Go-Training/tree/master/examples/11-B-concurrency/comparison
 
 Slides
 https://understanding-concurrency.slides.algogrit.com

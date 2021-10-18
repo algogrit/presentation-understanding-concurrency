@@ -15,3 +15,9 @@
 - Why is concurrency hard?
 
 - Golang?
+
+---
+
+## Enhancements
+
+- Add explanantion of code slides
